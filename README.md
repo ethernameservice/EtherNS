@@ -128,9 +128,101 @@ etherNS.getData("ether_name","data_name").then(function(result){ {
 
 Get Twitter account from .ether name.
 ```javascript
-etherns.getTwitter(ether_name).then(function(account_twitter){
+etherNS.getTwitter(ether_name).then(function(account_twitter){
      console.log(account_twitter)
-});
+})
+```
+
+
+**Get Instagram Account**
+
+Get Instagram account from .ether name.
+```javascript
+etherNS.getInstragram(ether_name).then(function(account_instagram){
+     console.log(account_instagram)
+})
+```
+
+**Get Discord Account**
+
+Get Discord account from .ether name.
+```javascript
+etherNS.getDiscord(ether_name).then(function(account_discord){
+     console.log(account_discord)
+})
+```
+
+**Get Tiktok Account**
+
+Get Tiktok account from .ether name.
+```javascript
+etherNS.getTiktok(ether_name).then(function(account_tiktok){
+     console.log(account_tiktok)
+})
+```
+
+**Get Reddit Account**
+
+Get Reddit account from .ether name.
+```javascript
+etherNS.getReddit(ether_name).then(function(account_reddit){
+     console.log(account_reddit)
+})
+```
+
+**Get Telegram Account**
+
+Get Telegram account from .ether name.
+```javascript
+etherNS.getTelegram(ether_name).then(function(account_telegram){
+     console.log(account_telegram)
+})
+```
+
+**Get URL**
+
+Get URL from .ether name.
+```javascript
+etherNS.getUrl(ether_name).then(function(account_url){
+     console.log(account_url)
+})
+```
+
+**Get Email**
+
+Get Email from .ether name.
+```javascript
+etherNS.getEmail(ether_name).then(function(account_email){
+     console.log(account_email)
+})
+```
+
+
+**Get Description**
+
+Get Description from .ether name.
+```javascript
+etherNS.getDescription(ether_name).then(function(account_description){
+     console.log(account_description)
+})
+```
+
+**Get Notice**
+
+Get Notice from .ether name.
+```javascript
+etherNS.getNotice(ether_name).then(function(account_notice){
+     console.log(account_notice)
+})
+```
+
+**Get Keywords**
+
+Get Keywords from .ether name.
+```javascript
+etherNS.getKeywords(ether_name).then(function(account_keywords){
+     console.log(account_keywords)
+})
 ```
 
 
@@ -153,11 +245,11 @@ etherNS.setPrimaryAddress("ether_name.ether","OWNER_ETH_ADDRESS").then(function(
 Changes the resolve address.
 ```javascript
  etherNS.setResolveAddress("ether_domain.ether","NEW_RESOLVE_ETH_ADDRESS", "OWNER_ETH_ADDRESS").then(function(result){
-		 if (result['status']) {
-            //Successful
-            } else {
-            //Failed
-            }
+        if (result['status']) {
+        //Successful
+        } else {
+        //Failed
+        }
  })
 ```
 
