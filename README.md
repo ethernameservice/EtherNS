@@ -11,7 +11,7 @@ This document will help you incorporate .ether into your projects. In the docume
 npm install web3
 ```
 
-**YARN**
+**YARNasgd**
 ```
 yarn add web3
 ```

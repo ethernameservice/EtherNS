@@ -1,0 +1,19 @@
+{
+  "name": "ethernameservice",
+  "version": "1.0.0",
+  "description": ".ether Name Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethernameservice/etherns.git"
+  },
+  "author": "etherDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethernameservice/etherns/issues"
+  },
+  "homepage": "https://github.com/ethernameservice/etherns#readme"
+}
