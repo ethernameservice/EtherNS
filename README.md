@@ -44,7 +44,7 @@ const etherNS = new EtherNS(web3)
 
 Returns the primary address registered to this address.
 ```javascript
-etherNS.primaryAddress("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69")
+etherNS.primaryAddress("ETH_ADDRESS")
 .then(function(result){
     console.log(result)
     // Returns the primary address registered to this address.
@@ -65,9 +65,9 @@ etherNS.resolveAddress("alice.ether").then(function(result){
 
 Returns the domains owned by an address.
 ```javascript
-etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(function(resultOwners){
+etherNS.addressOwners("ETH_ADDRESS").then(function(resultOwners){
 	console.log(resultOwners)	
-  });
+})
 ```
 
 **Subdomain Status**
@@ -99,18 +99,39 @@ Returns the last  registered .ether names
 etherNS.lastAddresses(10).then(function(result){
     console.log(result)
     //Returns the last 10 registered .ether name
+})
+```
+
+**Is this domain name taken ?**
+
+Returns whether a domain name has been registered by another user.
+```javascript
+etherNS.isTaken("ether_name").then(function(resultTaken){
+    if (resultTaken>0) {
+        //This domain name has been registered.
+    } 
+})
+```
+
+
+**Get Data**
+
+Get domain name information.
+```javascript
+etherNS.getData("ether_name","data_name").then(function(result){ {
+    console.log(result)
 });
 ```
 
 
+**Get Twitter Account**
 
-
-
-
-
-
-
-
+Get Twitter account from .ether name.
+```javascript
+etherns.getTwitter(ether_name).then(function(account_twitter){
+     console.log(account_twitter)
+});
+```
 
 
 
@@ -167,7 +188,7 @@ Registers a subdomain address and returns the result.
 ```
 
 
-**Start or Close subdomain sale.**
+**Start or Close subdomain sale**
 
 ```javascript
 etherNS.setSubdomainSaleActive("true",web3.utils.toWei("0.05",'ether'),"ether_name","OWNER_ETH_ADDRESS").then(function(result){
@@ -179,3 +200,16 @@ etherNS.setSubdomainSaleActive("true",web3.utils.toWei("0.05",'ether'),"ether_na
 })
 ```
 
+**Set Data**
+
+It allows you to add data for the domain name you have.
+```javascript
+etherNS.setData("ether_name","data_name","data_value", "Owner_Eth_Address").then(function(result){
+    if (result['status']) {
+     //Successful
+     //eq: data_name: twitter, data_value: twitter_account
+     } else {
+     //Failed
+     }
+})
+```
