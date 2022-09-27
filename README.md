@@ -70,6 +70,46 @@ etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(functio
   });
 ```
 
+**Subdomain Status**
+
+This query returns whether the subdomain sale is active.
+```javascript
+etherNS.subdomainPublicSale("ether_name").then(function(result) {
+    if (result) {
+        //Subdomain can be registered.
+    } else {
+        //Subdomain can't be registered.
+    }
+})
+```    
+
+**Subdomain Cost**
+
+This query returns the cost of subdomain sales.
+```javascript
+etherNS.subdomainPublicSale("ether_name").then(function(result_cost) {
+    console.log(result_cost)
+})    
+```    
+
+**Last registered names**
+
+Returns the last  registered .ether names
+```javascript
+etherNS.lastAddresses(10).then(function(result){
+    console.log(result)
+    //Returns the last 10 registered .ether name
+});
+```
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,3 +178,4 @@ etherNS.setSubdomainSaleActive("true",web3.utils.toWei("0.05",'ether'),"ether_na
      }
 })
 ```
+
