@@ -32,7 +32,7 @@ or
 ### Usage
 First, we connect with the libraries.
 
-```
+```sh
 const web3 = new Web3(Web3.givenProvider)
 // First create a web3js provider
 
@@ -104,16 +104,28 @@ Changes the resolve address.
 
 Registers a new .ether address and returns the result.
 ```
-etherNS.register("new_domain.ether",YOUR_ETH_ADDRESS,
-YOUR_REFERRAL_ADDRESS,web3.utils.toWei('0.04', 'ether'))
-.then(function(result){
-if (result['status']) {
-    // Registration Successful
-} else {
-    // Registration Failed
-}
+etherNS.register("new_domain.ether",YOUR_ETH_ADDRESS,YOUR_REFERRAL_ADDRESS,web3.utils.toWei('0.04', 'ether')).then(function(result){
+    if (result['status']) {
+        // Registration Successful
+    } else {
+        // Registration Failed
+    }
 })
 ```
+
+**Register Subdomain**
+
+Registers a subdomain address and returns the result.
+```
+ etherNS.registerSubdomain("MAIN_DOMAIN_NAME","YOUR_ETH_ADDRESS","NEW_SUBDOMAIN_NAME","COST_WEI").then(function(result){
+    if (result['status']) {
+        // Registration Successful
+    } else {
+        // Registration Failed
+    }    
+})
+```
+
 
 **Start or Close subdomain sale.**
 
