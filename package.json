@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/ethernameservice/etherns/issues"
   },
-  "homepage": "https://github.com/ethernameservice/etherns#readme"
+  "homepage": "https://github.com/ethernameservice/etherns#readme",
+  "keywords": []
 }
