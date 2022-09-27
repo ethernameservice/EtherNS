@@ -41,6 +41,7 @@ const etherNS = new EtherNS(web3)
 ```
 
 **Primary Address**
+
 Returns the primary address registered to this address.
 ```
 etherNS.primaryAddress("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69")
@@ -51,6 +52,7 @@ etherNS.primaryAddress("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69")
 ```
 
 **Resolve Address**
+
 Returns the resolved ethereum address of the .ether name.
 ```
 etherNS.resolveAddress("alice.ether").then(function(result){
@@ -60,6 +62,7 @@ etherNS.resolveAddress("alice.ether").then(function(result){
 ```
 
 **Address Owners**
+
 Returns the domains owned by an address.
 ```
 etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(function(resultOwners){
@@ -72,6 +75,7 @@ etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(functio
 
 
 **Set New Primary Address**
+
 Changes the primary address.
 ```
 etherNS.setPrimaryAddress("ether_name.ether","OWNER_ETH_ADDRESS").then(function(result){
@@ -84,6 +88,7 @@ etherNS.setPrimaryAddress("ether_name.ether","OWNER_ETH_ADDRESS").then(function(
 ```
 
 **Set New Resolve Address**
+
 Changes the resolve address.
 ```
  etherNS.setResolveAddress("ether_domain.ether","NEW_RESOLVE_ETH_ADDRESS", "OWNER_ETH_ADDRESS").then(function(result){
@@ -96,6 +101,7 @@ Changes the resolve address.
 ```
 
 **Register Main Domain**
+
 Registers a new .ether address and returns the result.
 ```
 etherNS.register("new_domain.ether",YOUR_ETH_ADDRESS,
@@ -110,6 +116,7 @@ if (result['status']) {
 ```
 
 **Start or Close subdomain sale.**
+
 ```
 etherNS.setSubdomainSaleActive("true",web3.utils.toWei("0.05",'ether'),"ether_name","OWNER_ETH_ADDRESS").then(function(result){
 	if (result['status']) {
