@@ -1,6 +1,6 @@
 {
   "name": "ethernameservice",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": ".ether Name Service",
   "main": "index.js",
   "scripts": {
