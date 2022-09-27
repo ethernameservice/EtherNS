@@ -17,11 +17,11 @@ yarn add web3
 ```
 
 **In the Browser**
-```
+```javascript
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 or
-```
+```javascript
 <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
 ```
 
@@ -32,7 +32,7 @@ or
 ### Usage
 First, we connect with the libraries.
 
-```sh
+```javascript
 const web3 = new Web3(Web3.givenProvider)
 // First create a web3js provider
 
@@ -43,7 +43,7 @@ const etherNS = new EtherNS(web3)
 **Primary Address**
 
 Returns the primary address registered to this address.
-```
+```javascript
 etherNS.primaryAddress("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69")
 .then(function(result){
     console.log(result)
@@ -54,7 +54,7 @@ etherNS.primaryAddress("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69")
 **Resolve Address**
 
 Returns the resolved ethereum address of the .ether name.
-```
+```javascript
 etherNS.resolveAddress("alice.ether").then(function(result){
     console.log(result)
     // Returns the resolved ethereum address of the .ether name.
@@ -64,7 +64,7 @@ etherNS.resolveAddress("alice.ether").then(function(result){
 **Address Owners**
 
 Returns the domains owned by an address.
-```
+```javascript
 etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(function(resultOwners){
 	console.log(resultOwners)	
   });
@@ -77,7 +77,7 @@ etherNS.addressOwners("0x12276DAC0C791d11e2F9166A2B67e3DE45394c69").then(functio
 **Set New Primary Address**
 
 Changes the primary address.
-```
+```javascript
 etherNS.setPrimaryAddress("ether_name.ether","OWNER_ETH_ADDRESS").then(function(result){
     if (result['status']) {
      //Successful
@@ -90,7 +90,7 @@ etherNS.setPrimaryAddress("ether_name.ether","OWNER_ETH_ADDRESS").then(function(
 **Set New Resolve Address**
 
 Changes the resolve address.
-```
+```javascript
  etherNS.setResolveAddress("ether_domain.ether","NEW_RESOLVE_ETH_ADDRESS", "OWNER_ETH_ADDRESS").then(function(result){
 		 if (result['status']) {
             //Successful
@@ -103,7 +103,7 @@ Changes the resolve address.
 **Register Main Domain**
 
 Registers a new .ether address and returns the result.
-```
+```javascript
 etherNS.register("new_domain.ether",YOUR_ETH_ADDRESS,YOUR_REFERRAL_ADDRESS,web3.utils.toWei('0.04', 'ether')).then(function(result){
     if (result['status']) {
         // Registration Successful
@@ -116,7 +116,7 @@ etherNS.register("new_domain.ether",YOUR_ETH_ADDRESS,YOUR_REFERRAL_ADDRESS,web3.
 **Register Subdomain**
 
 Registers a subdomain address and returns the result.
-```
+```javascript
  etherNS.registerSubdomain("MAIN_DOMAIN_NAME","YOUR_ETH_ADDRESS","NEW_SUBDOMAIN_NAME","COST_WEI").then(function(result){
     if (result['status']) {
         // Registration Successful
@@ -129,7 +129,7 @@ Registers a subdomain address and returns the result.
 
 **Start or Close subdomain sale.**
 
-```
+```javascript
 etherNS.setSubdomainSaleActive("true",web3.utils.toWei("0.05",'ether'),"ether_name","OWNER_ETH_ADDRESS").then(function(result){
 	if (result['status']) {
      //Successful
