@@ -27,6 +27,15 @@ or
 
 ### Installation
 
+**NODE**
+```
+npm install ethernameservice
+```
+
+**In the Browser**
+```javascript
+<script src="https://unpkg.com/ethernameservice@1.0.2/index.js"></script>
+```
 
 
 ### Usage
